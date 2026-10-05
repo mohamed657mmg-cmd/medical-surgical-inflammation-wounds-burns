@@ -3,256 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Medical Surgical Nursing Exam</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #07111f, #0b2740, #123b5d);
-    color: #fff;
-    min-height: 100vh;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#07111f,#0b2740,#123b5d);
+    min-height:100vh;
+    color:#fff;
 }
 
-.container {
-    width: 95%;
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 0;
+.container{
+    width:94%;
+    max-width:900px;
+    margin:auto;
+    padding:25px 0;
 }
 
-.card {
-    background: #ffffff;
-    color: #111;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+.card{
+    background:#fff;
+    color:#111;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
 }
 
-.start-screen {
-    text-align: center;
-    margin-top: 50px;
+.start-screen{
+    text-align:center;
+    margin-top:40px;
 }
 
-.logo {
-    font-size: 55px;
-    margin-bottom: 10px;
+.logo{
+    font-size:50px;
 }
 
-h1 {
-    color: #0b3150;
-    margin-bottom: 8px;
+h1{
+    color:#0b3150;
+    margin:10px 0;
 }
 
-.subtitle {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 25px;
+.subtitle{
+    color:#666;
+    margin:8px 0;
 }
 
-.pray {
-    background: #eef6ff;
-    border-radius: 12px;
-    padding: 15px;
-    color: #0b3150;
-    font-weight: bold;
-    margin: 20px 0;
+.pray{
+    background:#eef6ff;
+    color:#0b3150;
+    padding:15px;
+    border-radius:12px;
+    margin:25px 0;
+    font-weight:bold;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid #d8e2eb;
-    border-radius: 12px;
-    font-size: 16px;
-    outline: none;
-    margin-bottom: 15px;
+input{
+    width:100%;
+    padding:15px;
+    border:2px solid #dbe3ea;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:15px;
+    outline:none;
 }
 
-input[type="text"]:focus {
-    border-color: #123b5d;
+input:focus{
+    border-color:#123b5d;
 }
 
-button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #0b3150, #123b5d);
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#0b3150,#123b5d);
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-button:hover {
-    transform: translateY(-2px);
+button:active{
+    transform:scale(.98);
 }
 
-.hidden {
-    display: none;
+.hidden{
+    display:none !important;
 }
 
-.exam-header {
-    text-align: center;
-    margin-bottom: 20px;
+.exam-header{
+    text-align:center;
 }
 
-.exam-header h2 {
-    color: #0b3150;
-    margin-bottom: 5px;
+.exam-header h2{
+    color:#0b3150;
 }
 
-.student-name {
-    color: #666;
-    font-size: 14px;
+.student{
+    color:#666;
+    margin-bottom:20px;
 }
 
-.progress {
-    background: #e7edf2;
-    height: 10px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 15px 0 25px;
+.progress{
+    width:100%;
+    height:10px;
+    background:#e5e5e5;
+    border-radius:20px;
+    overflow:hidden;
+    margin:20px 0;
 }
 
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #123b5d;
-    transition: 0.3s;
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:#123b5d;
+    transition:.3s;
 }
 
-.question-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8ee;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 20px;
+.question-card{
+    background:#f8fafc;
+    border:1px solid #e1e7ec;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
 }
 
-.question-number {
-    color: #123b5d;
-    font-weight: bold;
-    margin-bottom: 12px;
+.question-number{
+    color:#123b5d;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
-.question {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.6;
-    margin-bottom: 18px;
-    direction: ltr;
-    text-align: left;
+.question{
+    font-size:18px;
+    font-weight:bold;
+    line-height:1.6;
+    direction:ltr;
+    text-align:left;
+    margin-bottom:15px;
 }
 
-.option {
-    border: 2px solid #dbe3ea;
-    border-radius: 12px;
-    padding: 13px;
-    margin: 10px 0;
-    cursor: pointer;
-    background: white;
-    color: #222;
-    transition: 0.2s;
-    direction: ltr;
-    text-align: left;
+.option{
+    background:#fff;
+    border:2px solid #dbe3ea;
+    border-radius:12px;
+    padding:13px;
+    margin:10px 0;
+    cursor:pointer;
+    direction:ltr;
+    text-align:left;
+    transition:.2s;
 }
 
-.option:hover {
-    background: #eef6ff;
-    border-color: #123b5d;
+.option:hover{
+    background:#eef6ff;
 }
 
-.option.selected {
-    background: #dcecff;
-    border-color: #123b5d;
-    font-weight: bold;
+.option.selected{
+    background:#dcecff;
+    border-color:#123b5d;
+    font-weight:bold;
 }
 
-.option.disabled {
-    cursor: not-allowed;
+.option.locked{
+    cursor:not-allowed;
 }
 
-.result {
-    text-align: center;
+.result{
+    text-align:center;
 }
 
-.score {
-    font-size: 50px;
-    font-weight: bold;
-    color: #123b5d;
-    margin: 15px 0;
+.score{
+    font-size:50px;
+    font-weight:bold;
+    color:#123b5d;
+    margin:20px 0;
 }
 
-.success {
-    background: #e8f7ed;
-    color: #16733a;
-    padding: 15px;
-    border-radius: 12px;
-    font-weight: bold;
+.success{
+    background:#e8f7ed;
+    color:#16733a;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
 }
 
-.review-title {
-    margin-top: 30px;
-    color: #0b3150;
+.fail{
+    background:#ffebee;
+    color:#c62828;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
 }
 
-.review-card {
-    text-align: left;
-    background: #f8fafc;
-    border-radius: 15px;
-    padding: 18px;
-    margin: 15px 0;
-    border: 1px solid #e1e7ec;
-    direction: ltr;
+.review-title{
+    color:#0b3150;
+    margin-top:30px;
 }
 
-.correct {
-    color: #16803c;
-    font-weight: bold;
-    margin-top: 8px;
+.review-card{
+    background:#f8fafc;
+    border:1px solid #e1e7ec;
+    border-radius:15px;
+    padding:18px;
+    margin:15px 0;
+    direction:ltr;
+    text-align:left;
 }
 
-.wrong {
-    color: #c62828;
-    font-weight: bold;
-    margin-top: 8px;
+.correct{
+    color:#16803c;
+    font-weight:bold;
+    margin-top:10px;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 25px;
-    color: #777;
-    font-size: 13px;
-    line-height: 1.8;
+.wrong{
+    color:#c62828;
+    font-weight:bold;
+    margin-top:10px;
 }
 
-.footer strong {
-    color: #123b5d;
+.footer{
+    text-align:center;
+    color:#777;
+    font-size:13px;
+    margin-top:25px;
+    line-height:1.8;
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 94%;
+@media(max-width:600px){
+    .card{
+        padding:18px;
     }
 
-    .card {
-        padding: 18px;
-    }
-
-    .question {
-        font-size: 16px;
-    }
-
-    .logo {
-        font-size: 45px;
+    .question{
+        font-size:16px;
     }
 }
 </style>
@@ -262,111 +251,108 @@ button:hover {
 
 <div class="container">
 
-    <!-- START SCREEN -->
-    <div id="startScreen" class="card start-screen">
+<!-- START -->
+<div id="startScreen" class="card start-screen">
 
-        <div class="logo">🩺</div>
+    <div class="logo">🩺</div>
 
-        <h1>Medical Surgical Nursing</h1>
+    <h1>Medical Surgical Nursing</h1>
+
+    <div class="subtitle">
+        Inflammation, Wounds & Burns
+    </div>
+
+    <div class="subtitle">
+        MCQ Exam (Above Medium Level) – 15 Questions
+    </div>
+
+    <div class="pray">
+        قبل ما تبدأ تحل<br>
+        صلّي على النبي ﷺ ❤️
+    </div>
+
+    <input
+        type="text"
+        id="studentName"
+        placeholder="Enter your name"
+    >
+
+    <button id="startBtn">
+        Start Exam
+    </button>
+
+    <div class="footer">
+        <b>Designed by Mohamed Mahmoud</b><br>
+        <b>Exam Author: Omar Abdel-Tawab</b>
+    </div>
+
+</div>
+
+
+<!-- EXAM -->
+<div id="examScreen" class="card hidden">
+
+    <div class="exam-header">
+
+        <h2>Medical Surgical Nursing</h2>
 
         <div class="subtitle">
             Inflammation, Wounds & Burns
         </div>
 
-        <div class="subtitle">
-            MCQ Exam (Above Medium Level) – 15 Questions
-        </div>
-
-        <div class="pray">
-            قبل ما تبدأ تحل<br>
-            صلّي على النبي ﷺ ❤️
-        </div>
-
-        <input
-            type="text"
-            id="studentName"
-            placeholder="Enter your name"
-            autocomplete="off"
-        >
-
-        <button onclick="startExam()">
-            Start Exam
-        </button>
-
-        <div class="footer">
-            <strong>Designed by Mohamed Mahmoud</strong><br>
-            <strong>Exam Author: Omar Abdel-Tawab</strong>
-        </div>
-
-    </div>
-
-
-    <!-- EXAM SCREEN -->
-    <div id="examScreen" class="card hidden">
-
-        <div class="exam-header">
-
-            <h2>
-                Medical Surgical Nursing
-            </h2>
-
-            <div class="subtitle">
-                Inflammation, Wounds & Burns
-            </div>
-
-            <div class="student-name">
-                Student:
-                <span id="displayName"></span>
-            </div>
-
-        </div>
-
-        <div class="progress">
-            <div id="progressBar" class="progress-bar"></div>
-        </div>
-
-        <div id="questionsContainer"></div>
-
-        <button onclick="submitExam()">
-            Submit Exam
-        </button>
-
-        <div class="footer">
-            <strong>Designed by Mohamed Mahmoud</strong><br>
-            <strong>Exam Author: Omar Abdel-Tawab</strong>
-        </div>
-
-    </div>
-
-
-    <!-- RESULT SCREEN -->
-    <div id="resultScreen" class="card result hidden">
-
-        <div class="logo">🎓</div>
-
-        <h1>Exam Result</h1>
-
-        <p>
+        <div class="student">
             Student:
-            <strong id="resultName"></strong>
-        </p>
-
-        <div class="score" id="score"></div>
-
-        <div id="resultMessage"></div>
-
-        <h2 class="review-title">
-            Answer Review
-        </h2>
-
-        <div id="reviewContainer"></div>
-
-        <div class="footer">
-            <strong>Designed by Mohamed Mahmoud</strong><br>
-            <strong>Exam Author: Omar Abdel-Tawab</strong>
+            <b id="displayName"></b>
         </div>
 
     </div>
+
+    <div class="progress">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <div id="questionsContainer"></div>
+
+    <button id="submitBtn">
+        Submit Exam
+    </button>
+
+    <div class="footer">
+        <b>Designed by Mohamed Mahmoud</b><br>
+        <b>Exam Author: Omar Abdel-Tawab</b>
+    </div>
+
+</div>
+
+
+<!-- RESULT -->
+<div id="resultScreen" class="card result hidden">
+
+    <div class="logo">🎓</div>
+
+    <h1>Exam Result</h1>
+
+    <p>
+        Student:
+        <b id="resultName"></b>
+    </p>
+
+    <div id="score" class="score"></div>
+
+    <div id="resultMessage"></div>
+
+    <h2 class="review-title">
+        Answer Review
+    </h2>
+
+    <div id="reviewContainer"></div>
+
+    <div class="footer">
+        <b>Designed by Mohamed Mahmoud</b><br>
+        <b>Exam Author: Omar Abdel-Tawab</b>
+    </div>
+
+</div>
 
 </div>
 
@@ -376,239 +362,254 @@ button:hover {
 const questions = [
 
 {
-    question: "Inflammation is the body's reaction against:",
-    options: [
-        "Only bacteria",
-        "Any external stimulus",
-        "Internal organs only",
-        "Surgical procedures only"
-    ],
-    answer: "Any external stimulus"
+question:"Inflammation is the body's reaction against:",
+options:[
+"Only bacteria",
+"Any external stimulus",
+"Internal organs only",
+"Surgical procedures only"
+],
+answer:"Any external stimulus"
 },
 
 {
-    question: "The most common inflammation in surgery is:",
-    options: [
-        "Viral inflammation",
-        "Chemical inflammation",
-        "Bacterial inflammation",
-        "Physical inflammation"
-    ],
-    answer: "Bacterial inflammation"
+question:"The most common inflammation in surgery is:",
+options:[
+"Viral inflammation",
+"Chemical inflammation",
+"Bacterial inflammation",
+"Physical inflammation"
+],
+answer:"Bacterial inflammation"
 },
 
 {
-    question: "Non-specific inflammation is caused by:",
-    options: [
-        "Tuberculosis only",
-        "Any type of microbe that was not treated completely",
-        "Viruses only",
-        "Physical factors only"
-    ],
-    answer: "Any type of microbe that was not treated completely"
+question:"Non-specific inflammation is caused by:",
+options:[
+"Tuberculosis only",
+"Any type of microbe that was not treated completely",
+"Viruses only",
+"Physical factors only"
+],
+answer:"Any type of microbe that was not treated completely"
 },
 
 {
-    question: "Cellulitis differs from abscess because cellulitis:",
-    options: [
-        "Is a collection of pus",
-        "Leads to abscess formation",
-        "Does not lead to abscess formation",
-        "Occurs only in the liver"
-    ],
-    answer: "Does not lead to abscess formation"
+question:"Cellulitis differs from abscess because cellulitis:",
+options:[
+"Is a collection of pus",
+"Leads to abscess formation",
+"Does not lead to abscess formation",
+"Occurs only in the liver"
+],
+answer:"Does not lead to abscess formation"
 },
 
 {
-    question: "In cellulitis, the danger lies in:",
-    options: [
-        "Skin redness only",
-        "Spread of microbe to blood causing bacteremia",
-        "Formation of blisters",
-        "Decreased temperature"
-    ],
-    answer: "Spread of microbe to blood causing bacteremia"
+question:"In cellulitis, the danger lies in:",
+options:[
+"Skin redness only",
+"Spread of microbe to blood causing bacteremia",
+"Formation of blisters",
+"Decreased temperature"
+],
+answer:"Spread of microbe to blood causing bacteremia"
 },
 
 {
-    question: "Which of the following is NOT a local symptom of inflammation?",
-    options: [
-        "Pain",
-        "Swelling",
-        "Increased pulse",
-        "Warmth of skin"
-    ],
-    answer: "Increased pulse"
+question:"Which of the following is NOT a local symptom of inflammation?",
+options:[
+"Pain",
+"Swelling",
+"Increased pulse",
+"Warmth of skin"
+],
+answer:"Increased pulse"
 },
 
 {
-    question: "The treatment of inflammation includes all EXCEPT:",
-    options: [
-        "Complete rest",
-        "Elevating the inflamed limb",
-        "Applying pressure on the wound",
-        "Giving antibiotics when needed"
-    ],
-    answer: "Applying pressure on the wound"
+question:"The treatment of inflammation includes all EXCEPT:",
+options:[
+"Complete rest",
+"Elevating the inflamed limb",
+"Applying pressure on the wound",
+"Giving antibiotics when needed"
+],
+answer:"Applying pressure on the wound"
 },
 
 {
-    question: "Tetanus is caused by:",
-    options: [
-        "Aerobic microbes",
-        "Anaerobic microbes",
-        "Viruses",
-        "Fungi"
-    ],
-    answer: "Anaerobic microbes"
+question:"Tetanus is caused by:",
+options:[
+"Aerobic microbes",
+"Anaerobic microbes",
+"Viruses",
+"Fungi"
+],
+answer:"Anaerobic microbes"
 },
 
 {
-    question: "A characteristic symptom of tetanus is:",
-    options: [
-        "Diarrhea",
-        "Inability to open the jaw",
-        "Skin rash only",
-        "Increased appetite"
-    ],
-    answer: "Inability to open the jaw"
+question:"A characteristic symptom of tetanus is:",
+options:[
+"Diarrhea",
+"Inability to open the jaw",
+"Skin rash only",
+"Increased appetite"
+],
+answer:"Inability to open the jaw"
 },
 
 {
-    question: "Gas gangrene occurs due to wound infection with microbes that produce:",
-    options: [
-        "Blood cells",
-        "Gases and toxins",
-        "Antibodies",
-        "Fluids only"
-    ],
-    answer: "Gases and toxins"
+question:"Gas gangrene occurs due to wound infection with microbes that produce:",
+options:[
+"Blood cells",
+"Gases and toxins",
+"Antibodies",
+"Fluids only"
+],
+answer:"Gases and toxins"
 },
 
 {
-    question: "A wound is defined as:",
-    options: [
-        "Infection of the skin only",
-        "A cut in skin and lining tissues of the human body",
-        "A burn caused by heat only",
-        "A fracture without injury"
-    ],
-    answer: "A cut in skin and lining tissues of the human body"
+question:"A wound is defined as:",
+options:[
+"Infection of the skin only",
+"A cut in skin and lining tissues of the human body",
+"A burn caused by heat only",
+"A fracture without injury"
+],
+answer:"A cut in skin and lining tissues of the human body"
 },
 
 {
-    question: "Which type of wound involves muscle injury and bone fracture?",
-    options: [
-        "Closed wound",
-        "Open wound",
-        "Compound wound",
-        "Surgical wound"
-    ],
-    answer: "Compound wound"
+question:"Which type of wound involves muscle injury and bone fracture?",
+options:[
+"Closed wound",
+"Open wound",
+"Compound wound",
+"Surgical wound"
+],
+answer:"Compound wound"
 },
 
 {
-    question: "Factors that delay wound healing include:",
-    options: [
-        "Proper nutrition",
-        "Cleaning the wound",
-        "Deficiency of proteins and vitamin C",
-        "Prevention of infection"
-    ],
-    answer: "Deficiency of proteins and vitamin C"
+question:"Factors that delay wound healing include:",
+options:[
+"Proper nutrition",
+"Cleaning the wound",
+"Deficiency of proteins and vitamin C",
+"Prevention of infection"
+],
+answer:"Deficiency of proteins and vitamin C"
 },
 
 {
-    question: "Second degree burns are characterized by:",
-    options: [
-        "Redness of skin",
-        "Serous blisters (vesicles)",
-        "Burning of muscles",
-        "Burning of bones"
-    ],
-    answer: "Serous blisters (vesicles)"
+question:"Second degree burns are characterized by:",
+options:[
+"Redness of skin",
+"Serous blisters (vesicles)",
+"Burning of muscles",
+"Burning of bones"
+],
+answer:"Serous blisters (vesicles)"
 },
 
 {
-    question: "Treatment of severe burns in burn unit includes:",
-    options: [
-        "Avoiding fluids",
-        "Administering antibiotics and fluids according to doctor's orders",
-        "Leaving wounds uncovered",
-        "No dressing required"
-    ],
-    answer: "Administering antibiotics and fluids according to doctor's orders"
+question:"Treatment of severe burns in burn unit includes:",
+options:[
+"Avoiding fluids",
+"Administering antibiotics and fluids according to doctor's orders",
+"Leaving wounds uncovered",
+"No dressing required"
+],
+answer:"Administering antibiotics and fluids according to doctor's orders"
 }
 
 ];
 
 
-let shuffledQuestions = [];
-let selectedAnswers = {};
+let examQuestions = [];
+let answers = {};
 let studentName = "";
 
 
-/* SHUFFLE FUNCTION */
-function shuffle(array) {
+/* SHUFFLE */
+function shuffle(array){
 
-    let arr = [...array];
+    let newArray = array.slice();
 
-    for (let i = arr.length - 1; i > 0; i--) {
+    for(let i = newArray.length - 1; i > 0; i--){
 
-        const j = Math.floor(Math.random() * (i + 1));
+        let j = Math.floor(Math.random() * (i + 1));
 
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+        let temp = newArray[i];
 
+        newArray[i] = newArray[j];
+
+        newArray[j] = temp;
     }
 
-    return arr;
+    return newArray;
 }
 
 
-/* START EXAM */
-function startExam() {
+/* START BUTTON */
+document.getElementById("startBtn").addEventListener("click", function(){
+
+    const nameInput =
+        document.getElementById("studentName");
 
     studentName =
-        document.getElementById("studentName").value.trim();
+        nameInput.value.trim();
 
-    if (studentName === "") {
+    if(studentName === ""){
 
         alert("Please enter your name first.");
+
+        nameInput.focus();
 
         return;
     }
 
-    document.getElementById("displayName").textContent =
-        studentName;
 
-    document.getElementById("startScreen").classList.add("hidden");
-
-    document.getElementById("examScreen").classList.remove("hidden");
-
-    shuffledQuestions = shuffle(questions);
-
-    selectedAnswers = {};
-
-    renderQuestions();
-
-    updateProgress();
-}
+    document.getElementById("displayName")
+        .textContent = studentName;
 
 
-/* DISPLAY QUESTIONS */
-function renderQuestions() {
+    document.getElementById("startScreen")
+        .classList.add("hidden");
+
+
+    document.getElementById("examScreen")
+        .classList.remove("hidden");
+
+
+    examQuestions = shuffle(questions);
+
+    answers = {};
+
+    showQuestions();
+
+});
+
+
+/* SHOW QUESTIONS */
+function showQuestions(){
 
     const container =
         document.getElementById("questionsContainer");
 
     container.innerHTML = "";
 
-    shuffledQuestions.forEach((q, index) => {
+
+    examQuestions.forEach(function(q,index){
 
         const card =
             document.createElement("div");
 
         card.className = "question-card";
+
 
         const number =
             document.createElement("div");
@@ -616,7 +617,9 @@ function renderQuestions() {
         number.className = "question-number";
 
         number.textContent =
-            `Question ${index + 1} of ${shuffledQuestions.length}`;
+            "Question " + (index + 1) +
+            " of " + examQuestions.length;
+
 
         card.appendChild(number);
 
@@ -629,14 +632,15 @@ function renderQuestions() {
         question.textContent =
             q.question;
 
+
         card.appendChild(question);
 
 
-        const shuffledOptions =
+        const options =
             shuffle(q.options);
 
 
-        shuffledOptions.forEach((option, optionIndex) => {
+        options.forEach(function(optionText){
 
             const option =
                 document.createElement("div");
@@ -644,19 +648,19 @@ function renderQuestions() {
             option.className = "option";
 
             option.textContent =
-                `${String.fromCharCode(65 + optionIndex)}) ${option}`;
+                optionText;
 
-            option.dataset.question =
-                index;
 
-            option.dataset.answer =
-                option;
+            option.addEventListener("click",function(){
 
-            option.onclick = function() {
+                selectAnswer(
+                    index,
+                    optionText,
+                    card
+                );
 
-                selectAnswer(index, option, option);
+            });
 
-            };
 
             card.appendChild(option);
 
@@ -667,86 +671,121 @@ function renderQuestions() {
 
     });
 
+
+    updateProgress();
+
 }
 
 
 /* SELECT ANSWER */
-function selectAnswer(questionIndex, element, answer) {
+function selectAnswer(index,answer,card){
 
-    if (selectedAnswers[questionIndex]) {
+    if(answers[index] !== undefined){
+
         return;
     }
 
-    selectedAnswers[questionIndex] = answer;
+
+    answers[index] = answer;
+
 
     const options =
-        document.querySelectorAll(
-            `.option[data-question="${questionIndex}"]`
-        );
+        card.querySelectorAll(".option");
 
-    options.forEach(option => {
 
-        option.classList.add("disabled");
+    options.forEach(function(option){
+
+        option.classList.add("locked");
 
     });
 
-    element.classList.add("selected");
+
+    options.forEach(function(option){
+
+        if(option.textContent === answer){
+
+            option.classList.add("selected");
+
+        }
+
+    });
+
 
     updateProgress();
+
 }
 
 
-/* UPDATE PROGRESS */
-function updateProgress() {
+/* PROGRESS */
+function updateProgress(){
 
     const answered =
-        Object.keys(selectedAnswers).length;
+        Object.keys(answers).length;
 
     const total =
-        shuffledQuestions.length;
+        examQuestions.length;
 
-    const percentage =
+    const percent =
         (answered / total) * 100;
 
-    document.getElementById("progressBar").style.width =
-        percentage + "%";
+
+    document.getElementById("progressBar")
+        .style.width = percent + "%";
+
 }
 
 
-/* SUBMIT EXAM */
-function submitExam() {
-
-    const total =
-        shuffledQuestions.length;
+/* SUBMIT */
+document.getElementById("submitBtn")
+.addEventListener("click",function(){
 
     const answered =
-        Object.keys(selectedAnswers).length;
+        Object.keys(answers).length;
 
-    if (answered !== total) {
+    const total =
+        examQuestions.length;
+
+
+    if(answered < total){
 
         alert(
-            `Please answer all questions first.\n\nAnswered: ${answered}/${total}`
+            "Please answer all questions first.\n\n" +
+            "Answered: " +
+            answered +
+            "/" +
+            total
         );
 
         return;
     }
 
 
-    const confirmSubmit =
+    const confirmation =
         confirm(
             "Are you sure you want to submit the exam?"
         );
 
-    if (!confirmSubmit) {
+
+    if(!confirmation){
+
         return;
     }
 
 
+    calculateResult();
+
+});
+
+
+/* RESULT */
+function calculateResult(){
+
     let score = 0;
 
-    shuffledQuestions.forEach((q, index) => {
 
-        if (selectedAnswers[index] === q.answer) {
+    examQuestions.forEach(function(q,index){
+
+        if(answers[index] === q.answer){
 
             score++;
 
@@ -755,12 +794,17 @@ function submitExam() {
     });
 
 
+    const total =
+        examQuestions.length;
+
+
     const percentage =
         Math.round((score / total) * 100);
 
 
     document.getElementById("examScreen")
         .classList.add("hidden");
+
 
     document.getElementById("resultScreen")
         .classList.remove("hidden");
@@ -771,48 +815,47 @@ function submitExam() {
 
 
     document.getElementById("score")
-        .textContent = `${score} / ${total}`;
+        .textContent =
+        score + " / " + total;
 
 
-    let message = "";
+    let message;
 
-    if (percentage >= 85) {
 
-        message =
-            `<div class="success">
-                Excellent! 🌟<br>
-                Your Score: ${percentage}%
-            </div>`;
-
-    } else if (percentage >= 70) {
+    if(percentage >= 85){
 
         message =
-            `<div class="success">
-                Very Good! 👏<br>
-                Your Score: ${percentage}%
-            </div>`;
+        `<div class="success">
+        Excellent! 🌟<br>
+        Your Score: ${percentage}%
+        </div>`;
 
-    } else if (percentage >= 50) {
-
-        message =
-            `<div class="success">
-                Good Job! 👍<br>
-                Your Score: ${percentage}%
-            </div>`;
-
-    } else {
+    }
+    else if(percentage >= 70){
 
         message =
-            `<div style="
-                background:#ffebee;
-                color:#c62828;
-                padding:15px;
-                border-radius:12px;
-                font-weight:bold;
-            ">
-                Keep Studying! 💪<br>
-                Your Score: ${percentage}%
-            </div>`;
+        `<div class="success">
+        Very Good! 👏<br>
+        Your Score: ${percentage}%
+        </div>`;
+
+    }
+    else if(percentage >= 50){
+
+        message =
+        `<div class="success">
+        Good Job! 👍<br>
+        Your Score: ${percentage}%
+        </div>`;
+
+    }
+    else{
+
+        message =
+        `<div class="fail">
+        Keep Studying! 💪<br>
+        Your Score: ${percentage}%
+        </div>`;
 
     }
 
@@ -826,8 +869,8 @@ function submitExam() {
 }
 
 
-/* REVIEW ANSWERS */
-function showReview() {
+/* REVIEW */
+function showReview(){
 
     const container =
         document.getElementById("reviewContainer");
@@ -835,23 +878,25 @@ function showReview() {
     container.innerHTML = "";
 
 
-    shuffledQuestions.forEach((q, index) => {
+    examQuestions.forEach(function(q,index){
 
         const userAnswer =
-            selectedAnswers[index];
+            answers[index];
 
-        const isCorrect =
+
+        const correct =
             userAnswer === q.answer;
 
 
         const card =
             document.createElement("div");
 
-        card.className =
-            "review-card";
+        card.className = "review-card";
 
 
-        card.innerHTML = `
+        let html = "";
+
+        html += `
             <strong>
                 Question ${index + 1}
             </strong>
@@ -859,19 +904,21 @@ function showReview() {
             <p>
                 ${q.question}
             </p>
+        `;
 
-            ${
-                isCorrect
 
-                ?
+        if(correct){
 
-                `<div class="correct">
+            html += `
+                <div class="correct">
                     ✅ Correct Answer: ${q.answer}
-                </div>`
+                </div>
+            `;
 
-                :
+        }
+        else{
 
-                `
+            html += `
                 <div class="wrong">
                     ❌ Your Answer: ${userAnswer}
                 </div>
@@ -879,10 +926,12 @@ function showReview() {
                 <div class="correct">
                     ✅ Correct Answer: ${q.answer}
                 </div>
-                `
-            }
-        `;
+            `;
 
+        }
+
+
+        card.innerHTML = html;
 
         container.appendChild(card);
 
@@ -893,4 +942,4 @@ function showReview() {
 </script>
 
 </body>
-  </html>
+    </html>
